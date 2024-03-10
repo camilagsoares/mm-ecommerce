@@ -2,10 +2,10 @@ import Footer from "../components/Footer";
 
 export function Index() {
     return(
-        <div>
+        <div className="">
             Pagina inicial
 
-            <Footer />
+         
         </div>
     )
 }

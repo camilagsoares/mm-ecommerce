@@ -7,9 +7,11 @@ export default function Layout() {
 	return (
 		<div className="">
 			<Header />
-			<div className="flex-1 p-4 min-h-0 overflow-auto">
+			
+			<div className="flex-1 p-4 min-h-0 overflow-auto " style={{ minHeight: '900px' }}>
 				<Outlet />
 			</div>
+			<Footer />
 		</div>
 	)
 }
