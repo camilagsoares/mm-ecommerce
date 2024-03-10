@@ -56,7 +56,7 @@ export function Header () {
                     <button  className={`block py-2 pr-4 pl-3 text-white focus:outline-none `}>Produtos</button>
 
                 </li>
-                <li><a href="/about-us" className="block py-2 pr-4 pl-3 text-white">Sobre nós</a></li>
+                <li><a href="/sobre-nos" className="block py-2 pr-4 pl-3 text-white">Sobre nós</a></li>
             </ul>
         </div>
     </div>
