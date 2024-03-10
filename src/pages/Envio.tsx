@@ -1,7 +1,9 @@
+import TitleComponent from "../components/Title";
+
 export function Envio() {
-    return(
-        <div>
-          Pagina envio
-        </div>
-    )
+  return (
+    <div>
+      <TitleComponent title="Envio" />
+    </div>
+  )
 }

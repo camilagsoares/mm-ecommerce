@@ -117,9 +117,9 @@ const Footer = () => {
               <div className="flex items-center">
                 <div className="relative">
                   <input type="email" placeholder="Seu email" className="w-300 px-4 py-2 border-t border-b border-l text-gray-800 border-gray-200 bg-white pr-12 rounded-full outline-none" />
-                  <button className={`w-70 absolute inset-y-0 right-0 rounded-full transition-colors duration-300 px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-textVerde  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 flex items-center justify-center ${hovered ? 'hover:bg-customColor' : 'hover:bg-textVerde'}` }
-                     onMouseEnter={() => setHovered(true)}
-                     onMouseLeave={() => setHovered(false)}
+                  <button className={`w-70 absolute inset-y-0 right-0 rounded-full transition-colors duration-300 px-3 py-2 border border-transparent text-base font-medium rounded-full text-white bg-textVerde  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 flex items-center justify-center ${hovered ? 'hover:bg-customColor' : 'hover:bg-textVerde'}`}
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}
                   >
                     <span className="mt-1">
                       <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,12 +143,19 @@ const Footer = () => {
         <div className="px-4 py-6  bg-bgFooter md:flex md:items-center md:justify-between">
           <span className="text-sm text-white sm:text-center">© 2024 by M&M Soluções.  | CNPJ: 28.926.408/0001-08
           </span>
-          <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
-            <a href="#" className="text-white">
-              Sobre nós | Segurança | Política de Privacidade | Envio | Troca e Devolução
 
-            </a>
+          <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+            <a href="/sobre-nos" className="text-white  hover:text-textVerde">Sobre nós</a>
+            <span className="text-white">|</span>
+            <a href="/seguranca" className="text-white  hover:text-textVerde">Segurança</a>
+            <span className="text-white">|</span>
+            <a href="/politica-privacidade" className="text-white  hover:text-textVerde">Política de Privacidade</a>
+            <span className="text-white">|</span>
+            <a href="/envio" className="text-white  hover:text-textVerde">Envio</a>
+            <span className="text-white">|</span>
+            <a href="/troca-devolucao" className="text-white  hover:text-textVerde">Troca e Devolução</a>
           </div>
+
         </div>
       </div>
     </footer>

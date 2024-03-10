@@ -1,7 +1,9 @@
+import TitleComponent from "../components/Title"
+
 export function PoliticaPrivacidade() {
     return(
         <div>
-          Pagina política de privacidade
+         <TitleComponent title="Política de Privacidade" />
         </div>
     )
 }

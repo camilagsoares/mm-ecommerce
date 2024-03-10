@@ -1,7 +1,9 @@
+import TitleComponent from "../components/Title"
+
 export function TrocaDevolucao() {
-    return(
-        <div>
-          Pagina troca devolução
-        </div>
-    )
+  return (
+    <div>
+      <TitleComponent title="Troca e Devolução" />
+    </div>
+  )
 }

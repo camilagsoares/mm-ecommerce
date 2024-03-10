@@ -1,7 +1,10 @@
+import TitleComponent from "../components/Title";
+
 export function Seguranca() {
-    return(
-        <div>
-          Pagina segurança
-        </div>
-    )
+  
+  return (
+    <div>
+      <TitleComponent title="Segurança" />
+    </div>
+  )
 }
