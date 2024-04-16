@@ -1,4 +1,5 @@
 import React from 'react'; // Importe o React
+import { TitleBox, LineGreen, TitleContainer, BoxTitle } from "../../components/TitleStyles" // Importe os estilos do TitleComponent
 
 import TitleComponent from "../../components/Title"
 
@@ -7,7 +8,7 @@ export function TrocaDevolucao() {
     <div>
       <TitleComponent title="Troca e Devolução" />
       <div className="flex items-center justify-center">
-        <div className="mt-8 w-full max-w-4xl px-4">
+        <div className="mt-8 w-full max-w-4xl px-4 content-width"> {/* Adicione a classe content-width aqui */}
           <p className="text-justify text-textCinza">Nosso objetivo é que você tenha uma experiência incrível conosco, entretanto caso você tenha algum problema com seu pedido, saiba que estaremos aqui para te ajudar na área do cliente. É importante salientar que você pode solicitar a troca ou a devolução do seu pedido no prazo de até 7 (sete) dias corridos, contados a partir do dia do recebimento do produto.</p>
 
           <p className="text-justify text-textCinza mt-4">TROCA POR DEFEITO DO PRODUTO</p>
