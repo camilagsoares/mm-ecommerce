@@ -7,7 +7,7 @@ import { Index } from './pages/Index'
 import { Error } from './pages/Error'
 import Layout from './Layout'
 import { AboutUs } from './pages/SobreNos';
-import { TrocaDevolucao } from './pages/TrocaDevolucao'
+import { TrocaDevolucao } from './pages/TrocaDevolucao/TrocaDevolucao'
 import { Envio } from './pages/Envio';
 import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade';
 import { Seguranca } from './pages/Seguranca';
