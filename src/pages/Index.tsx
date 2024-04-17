@@ -3,6 +3,7 @@ import SecondTitle from "../components/SecondTitle";
 import TitleComponent from "../components/Title";
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import ProductSlider from "./Teste";
 
 
 export function Index() {
@@ -189,10 +190,25 @@ export function Index() {
   }
 `;
 
+const products = [
+  {
+    id: 1,
+    name: 'Produto 1',
+    image: 'https://static.wixstatic.com/media/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.png/v1/fill/w_745,h_745,q_90/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.webp',
+    description: 'Descrição do produto 1'
+  },
+  {
+    id: 2,
+    name: 'Produto 2',
+    image: 'https://static.wixstatic.com/media/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.png/v1/fill/w_745,h_745,q_90/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.webp',
+    description: 'Descrição do produto 2'
+  },
+  // Adicione mais produtos conforme necessário
+];
     return (
         <div>
-            <Container>
-                <Card>
+            {/* <Container> */}
+                {/* <Card>
                     <Content>
                         <Title>MMS - STARTER</Title>
                         <Heading>Basic</Heading>
@@ -215,21 +231,32 @@ export function Index() {
                     <CardContainer>
                         <Image src="https://i.ibb.co/VYDqMQZ/Mask-group.png" alt="Mask-group" />
                     </CardContainer>
-                </Card>
-                <AdditionalImagesContainer>
+                </Card> */}
+                {/* <AdditionalImagesContainer>
                     <Image src="https://i.ibb.co/VYDqMQZ/Mask-group.png" alt="Mask-group" style={{ marginRight: '40px' }} />
                     <Image src="https://i.ibb.co/VYDqMQZ/Mask-group.png" alt="Mask-group" />
-                </AdditionalImagesContainer>
+                </AdditionalImagesContainer> */}
 
 
-            </Container>
+            {/* </Container> */}
             {/* <div className="flex items-center justify-center">
                 <div className="w-6 h-6 bg-textVerde rounded-md	"></div>
 
             </div> */}
 
 
-            <div className="flex items-center justify-center">
+      
+                <ProductSlider  />
+
+
+{/* RETIRAR TAG BR DEPOIS */}
+<br /><br />
+<br />
+<br />
+<br />
+
+            
+                <div className="flex items-center justify-center mt-16">
                 <ContainerForm>
                     <BlueBackground>
                         <ResponsiveGreenFormContainer>
