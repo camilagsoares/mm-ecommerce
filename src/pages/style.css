@@ -1,0 +1,54 @@
+.slide {
+}
+
+.slider-container {
+    overflow-x: hidden; /* Remove o scroll horizontal */
+}
+
+.mobile-arrows .slider-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none; /* Remove o efeito de borda ao clicar */
+}
+
+.mobile-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slider-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.slide-image {
+    border-radius: 10px; /* Adiciona borda arredondada */
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: 60%;
+    }
+}
+
+/* Define o tamanho das setas no desktop */
+@media (min-width: 768px) {
+    .slider-button {
+        width: 332px;
+        height: 287px;
+    }
+
+    .left-arrow {
+        margin-left: 20px; /* Ajusta a margem esquerda */
+    }
+
+    .right-arrow {
+        margin-right: 20px; /* Ajusta a margem direita */
+    }
+}
