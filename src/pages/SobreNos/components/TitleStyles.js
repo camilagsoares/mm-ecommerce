@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 export const TitleBox = styled.h3`
   color: #265094;
-  font-size: 2em; 
+  font-size: 1rem; 
   font-weight: 700;
   margin-bottom: 0;
   font-family: 'Inter';

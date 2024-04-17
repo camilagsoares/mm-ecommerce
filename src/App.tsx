@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import { Index } from './pages/Index'
 import { Error } from './pages/Error'
 import Layout from './Layout'
-import { AboutUs } from './pages/SobreNos';
+import { AboutUs } from './pages/SobreNos/SobreNos';
 import { TrocaDevolucao } from './pages/TrocaDevolucao/TrocaDevolucao'
 import { Envio } from './pages/Envio';
 import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade';
