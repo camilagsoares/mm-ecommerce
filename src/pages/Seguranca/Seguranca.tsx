@@ -1,4 +1,4 @@
-import TitleComponent from "../components/Title";
+import TitleComponent from "../../components/Title";
 
 export function Seguranca() {
   
