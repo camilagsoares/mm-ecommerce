@@ -4,7 +4,7 @@ import TitleComponent from "./components/Title/Title";
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import ProductSlider from "./components/ProductSlider/ProductSlider";
-
+import { CircleGreen, AlignCenter } from './style'
 
 export function Index() {
 
@@ -190,40 +190,17 @@ export function Index() {
   }
 `;
 
-  const products = [
-    {
-      id: 1,
-      name: 'Produto 1',
-      image: 'https://static.wixstatic.com/media/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.png/v1/fill/w_745,h_745,q_90/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.webp',
-      description: 'Descrição do produto 1'
-    },
-    {
-      id: 2,
-      name: 'Produto 2',
-      image: 'https://static.wixstatic.com/media/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.png/v1/fill/w_745,h_745,q_90/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.webp',
-      description: 'Descrição do produto 2'
-    },
-    // Adicione mais produtos conforme necessário
-  ];
+
   return (
     <div>
 
       <TitleComponent title="PRODUTOS" />
 
-      
-
-     
-
-
       <ProductSlider />
 
-
-      {/* RETIRAR TAG BR DEPOIS */}
-      <br /><br />
-      <br />
-      <br />
-      <br />
-
+      <AlignCenter>
+        <CircleGreen />
+      </AlignCenter>
 
       {/* <div className="flex items-center justify-center mt-16" style={{ overflow: 'hidden' }}>
         <ContainerForm>
