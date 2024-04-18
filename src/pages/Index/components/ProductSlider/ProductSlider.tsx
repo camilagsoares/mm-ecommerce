@@ -16,14 +16,11 @@ const ProductSlider: React.FC = () => {
     { name: 'MMS - STARTER HIGH', description: '45.000.00,35.000.00', image: 'https://static.wixstatic.com/media/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.png/v1/fill/w_731,h_731,q_90/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.webp' },
     { name: 'MMS - STARTER MEDIUM', description: '17.400.00,13.500.00', image: 'https://static.wixstatic.com/media/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.png/v1/fill/w_731,h_731,q_90/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.webp' },
     { name: 'MMS - STARTER BASIC', description: '10.400.00,8.000.00', image: 'https://static.wixstatic.com/media/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.png/v1/fill/w_731,h_731,q_90/e8f377_e79a2d5611354c41b13c4632c72dccdf~mv2.webp' },
-    // Adicione mais produtos conforme necessário
   ];
 
   const formatDescription = (description: string) => {
-    // Separa os preços considerando o padrão "valor1,valor2"
     const [price1, price2] = description.split(',');
 
-    // Remove espaços em branco e formata os valores monetários
     const formattedPrice1 = price1.trim().replace('.', ',');
     const formattedPrice2 = price2.trim().replace('.', ',');
 

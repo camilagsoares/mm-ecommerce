@@ -41,6 +41,8 @@ h1{
   font-weight: 700;
   font-family: 'Inter';
   font-size: 2.1rem;
+
+  /* margin-bottom: 30px; */
 }
 
 @media (max-width: 600px) {

@@ -6,24 +6,24 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px; /* Reduzir o padding para dispositivos móveis */
+  padding: 20px; 
   background: linear-gradient(to right, #13305E, #31504E);
   box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
-  height: auto; /* Definir a altura como automática */
+  height: auto; 
 
   @media (min-width: 769px) {
     height: 800px;
-    flex-direction: row; /* Alterado para row para posicionar os elementos na mesma linha */
-    align-items: center; /* Alinhar os itens ao centro */
-    padding: 70px; /* Restaurar o padding para telas maiores */
+    flex-direction: row; 
+    align-items: center;
+    padding: 70px; 
   }
 `;
 
 const Menu = styled.nav`
-  display: none; /* Ocultar o menu em dispositivos móveis */
+  display: none;
 
   @media (min-width: 769px) {
-    display: block; /* Exibir o menu em telas maiores */
+    display: block;
     text-align: center;
     margin-bottom: 20px;
 
@@ -56,8 +56,8 @@ const TextContainer = styled.div`
   text-align: center;
 
   @media (min-width: 769px) {
-    text-align: left; /* Alinhar o texto à esquerda */
-    margin-right: 20px; /* Adicionar margem à direita para separar da imagem */
+    text-align: left;
+    margin-right: 20px; 
   }
 `;
 
@@ -87,20 +87,20 @@ const Subtitle = styled.p`
   margin-bottom: 20px;
 
   @media (min-width: 769px) {
-    text-align: left; /* Alinhar o texto à esquerda */
+    text-align: left; 
   }
 `;
 
 const Logo = styled.img`
-  width: 100%; /* Definir a largura como 100% para ocupar o espaço disponível */
-  max-width: 300px; /* Definir uma largura máxima para a imagem em dispositivos móveis */
-  height: auto; /* Manter a proporção da imagem */
+  width: 100%;
+  max-width: 300px; 
+  height: auto; 
   margin-bottom: 20px;
 
   @media (min-width: 769px) {
-    margin-bottom: 0; /* Remover margem inferior em telas maiores */
-    max-width: none; /* Remover a largura máxima em telas maiores */
-    width: auto; /* Permitir que a imagem tenha sua largura natural em telas maiores */
+    margin-bottom: 0; 
+    max-width: none; 
+    width: auto; 
   }
 `;
 

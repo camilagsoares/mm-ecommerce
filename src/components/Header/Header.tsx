@@ -23,19 +23,19 @@ const Container = styled.div`
 const Logo = styled.img`
  width: 50px;
   height: 50px;
-  margin-right: 20px; /* Espaçamento entre logo e menu */
-  margin-bottom: 20px; /* Margem inferior para descer a logo */
+  margin-right: 20px; 
+  margin-bottom: 20px; 
 
   @media (max-width: 768px) {
     margin-right: 0;
-    margin-bottom: 10px; /* Espaçamento entre logo e ícones */
+    margin-bottom: 10px; 
   }
 `;
 
 const Menu = styled.nav`
  flex: 1;
   text-align: center;
-  margin-top: 20px; /* Espaçamento superior maior para descer o menu */
+  margin-top: 20px; 
   
   ul {
     list-style: none;
@@ -76,7 +76,7 @@ const IconWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    margin-top: 20px; /* Espaçamento superior maior para descer os ícones */
+    margin-top: 20px;
   }
 `;
 
