@@ -3,7 +3,7 @@ import 'tailwindcss/tailwind.css';
 import './index.css';
 
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
-import { Index } from './pages/Index'
+import { Index } from './pages/Index/Index'
 import { Error } from './pages/Error'
 import Layout from './Layout'
 import CommonLayout from './CommonLayout';
