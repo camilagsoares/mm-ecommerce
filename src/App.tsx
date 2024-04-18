@@ -4,14 +4,14 @@ import './index.css';
 
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import { Index } from './pages/Index/Index'
-import { Error } from './pages/Error'
+import { Error } from './pages/Error/Error'
 import Layout from './Layout'
 import CommonLayout from './CommonLayout';
 import { AboutUs } from './pages/SobreNos/SobreNos';
 import { TrocaDevolucao } from './pages/TrocaDevolucao/TrocaDevolucao'
-import { Envio } from './pages/Envio';
-import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade';
-import { Seguranca } from './pages/Seguranca';
+import { Envio } from './pages/Envio/Envio';
+import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade/PoliticaPrivacidade';
+import { Seguranca } from './pages/Seguranca/Seguranca';
 
 function App() {
   return (
