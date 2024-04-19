@@ -7,7 +7,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background: linear-gradient(to right, #13305E, #31504E); 
+  background:     linear-gradient(to bottom right, #051b3b, #234b8d);
+
   /* border: 1px solid #ccc; */ /* Removido para remover a borda branca */
   /* border-radius: 5px; */
   box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
