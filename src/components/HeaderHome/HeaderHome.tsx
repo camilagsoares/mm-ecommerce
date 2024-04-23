@@ -22,8 +22,6 @@ const Container = styled.div`
 `;
 
 
-
-
 const MenuWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -80,10 +78,11 @@ const TextContainer = styled.div`
 
   @media (min-width: 769px) {
     text-align: left; 
-    width: 500px; 
-    margin-right: 20px; 
+    width: calc(50% - 20px); /* Defina a largura máxima do TextContainer */
+    margin-right: 20px; /* Margem entre o TextContainer e a imagem */
   }
 `;
+
 
 const Title = styled.h1`
   color: #fff;
