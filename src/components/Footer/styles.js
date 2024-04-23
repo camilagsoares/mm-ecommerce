@@ -221,6 +221,7 @@ export const BottomFooterContainer = styled.div`
   span {
     font-size: 0.75rem;
     color: white;
+    font-weight: 200;
   }
 
   .link-container {
@@ -230,6 +231,7 @@ export const BottomFooterContainer = styled.div`
 
     a {
       font-size: 0.75rem;
+      font-weight: 200;
       color: white;
       margin: 0 0.25rem;
       text-decoration: none;
@@ -245,6 +247,36 @@ export const BottomFooterContainer = styled.div`
       margin: 0 0.25rem;
     }
   }
+
+  .link-container {
+  display: flex;
+  align-items: center; /* Para centralizar verticalmente os itens */
+  margin-top: 1rem;
+}
+
+.link-container > * {
+  display: inline-flex; /* Exibe os itens na mesma linha */
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+.link-container a,
+.link-container span {
+  font-size: 0.75rem;
+  font-weight: 200;
+  color: white;
+  margin: 0 0.25rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link-container a:hover {
+  color: #88BB76;
+}
+
+.link-container span {
+  color: ${({ theme }) => theme.textColor};
+}
+
 `;
 
 

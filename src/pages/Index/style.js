@@ -156,6 +156,13 @@ export const GreenFormContainer = styled.div`
 `;
 
 export const ResponsiveGreenFormContainer = styled(GreenFormContainer)`
+
+.title-Radio{
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
 label {
   color : white;
   font-family: 'Inter';
@@ -221,4 +228,73 @@ export const StyledSelect = styled.select`
   font-size: 14px; /* Tamanho da fonte ajustável para dispositivos móveis */
 `;
 
+export const BlueText = styled.label`
+    color: #265094;
+`;
 
+export const RoundInput = styled.input`
+    border-radius: 50px;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 10px;
+    margin-right: 5px;
+`;
+
+export const StyledRadio = styled.input`
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: none;
+    margin-right: 5px;
+    position: relative;
+
+    &:checked::before {
+        content: '';
+        width: 8px; /* Tamanho menor da bolinha */
+        height: 8px; /* Tamanho menor da bolinha */
+        border-radius: 50%;
+        background-color: #265094;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+`;
+
+// Criando um novo componente para o container dos campos lado a lado
+export const FieldsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+// Estilizando os campos "Sobre o imóvel" e "Título do imóvel"
+export const StyledSelectWithMargin = styled(StyledSelect)`
+  margin-right: 1rem;
+`;
+
+// Estilizando os campos "Sobre o imóvel" e "Título do imóvel"
+export const StyledRadioWithMargin = styled(StyledRadio)`
+  margin-right: 0.5rem;
+`;
+
+
+
+export const Header = styled.h2`
+  font-size: 0.875rem;
+  font-weight: 600; 
+  color: #fff; 
+  text-transform: uppercase; 
+  position: relative; 
+  margin-top: -1rem; 
+`;
+
+export const GreenLine = styled.div`
+  height: 8px; 
+  width: 100px; 
+  background-color: #88BB76; 
+  margin-top: 0.4rem;
+  /* margin-top: -0.94rem; */
+`;
