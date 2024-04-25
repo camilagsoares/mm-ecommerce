@@ -136,7 +136,7 @@ const Footer: React.FC = () => {
         </GridContainer>
         <StyledHR />
         <BottomFooterContainer>
-          <span>© 2024 by M&M Soluções.  | CNPJ: 28.926.408/0001-08</span>
+          <span className='direitos'>© 2024 by M&M Soluções.  | CNPJ: 28.926.408/0001-08</span>
           <div className="link-container">
             <a href="/sobre-nos">Sobre nós</a>
             <span>|</span>
