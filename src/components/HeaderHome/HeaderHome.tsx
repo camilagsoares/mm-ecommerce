@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../../assets/logo.png';
 import backgroundImage from '../../assets/imagem.png';
-import { FiMenu, FiSearch, FiShoppingCart } from 'react-icons/fi'; // Importe os ícones necessários
 
 const Container = styled.div`
+width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,27 +25,37 @@ const Container = styled.div`
 const MenuWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Alinha os elementos verticalmente */
+  align-items: center;
   width: 100%;
-  padding: 20px 90px; /* Ajuste o espaçamento conforme necessário */
-  margin-top: 20px; /* Ajuste para descer toda a linha */
+  padding: 20px 90px;
+  margin-top: 45px; 
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  @media (min-width: 769px) {
+    padding: 20px 200px;
+  }
 `;
 
+
 const Logo = styled.img`
-  height: 50px; /* Ajuste conforme necessário */
+  height: 50px; 
 `;
 
 const IconsContainer = styled.div`
   display: flex;
   align-items: center;
+
+  svg {
+    margin-right: 10px; 
+  }
 `;
 
-const Icon = styled.div`
-  font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
-  color: #fff;
-  cursor: pointer;
-  margin-left: 10px; /* Ajuste o espaçamento entre os ícones conforme necessário */
-`;
+
 
 const Menu = styled.nav`
   text-align: center;
@@ -57,15 +67,23 @@ const Menu = styled.nav`
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center; /* Alinha os itens verticalmente */
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   li {
-    margin: 0 20px; /* Ajuste as margens conforme necessário */
+    margin: 0 20px; 
     color: #fff;
     font-weight: 500;
     cursor: pointer;
     transition: color 0.3s ease;
+
+    @media (max-width: 768px) {
+      margin: 10px 0;
+    }
 
     &:hover {
       color: #88BB76;
@@ -84,22 +102,22 @@ const TextContainer = styled.div`
 
   @media (min-width: 769px) {
     text-align: left; 
-    width: calc(50% - 20px); /* Defina a largura máxima do TextContainer */
-    margin-right: 20px; /* Margem entre o TextContainer e a imagem */
+    width: calc(50% - 20px);
+    margin-right: 20px; 
   }
 `;
 
 
 const Title = styled.h1`
   color: #fff;
-  font-size: 67px;
+  font-size: 4rem; /* Tamanho base usando rem */
   margin-bottom: 10px;
   font-family: 'Inter';
   text-transform: uppercase;
   font-weight: 700;
 
   @media (max-width: 768px) {
-    font-size: 50px; 
+    font-size: 2.5rem; /* Reduzir o tamanho para dispositivos móveis */
   }
 `;
 
@@ -121,27 +139,35 @@ const Subtitle = styled.p`
 `;
 
 const Image = styled.img`
-  width: 880px;
+  width: 100%;
+  max-width: 600px; /* Largura máxima ajustável */
   height: auto;
-  margin-top: 20px; /* Ajuste o valor conforme necessário */
+  margin-top: 20px;
 
   @media (max-width: 768px) {
-    margin-top: 40px; /* Ajuste o valor conforme necessário para dispositivos móveis */
+    margin-top: 40px;
+  }
+
+  @media (min-width: 820px) {
+    margin-top: 20px;
+    max-width: calc(50% - 10px); /* Largura máxima ajustável para telas maiores */
   }
 `;
+
+
 
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between; /* Adicionado para afastar os elementos */
+  justify-content: space-between; 
   width: 100%;
-  margin-top: 40px; /* Ajuste o valor conforme necessário */
+  margin-top: 40px; 
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* Ajuste o valor conforme necessário para dispositivos móveis */
+    margin-top: 20px;
   }
 `;
 
@@ -154,19 +180,6 @@ const CentralizedContainer = styled.div`
   width: 100%;
 `;
 
-
-const LinksContainer = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const Link = styled.a`
-  color: #fff;
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: none;
-  margin-right: 20px; /* Ajuste o espaçamento entre os links conforme necessário */
-`;
 
 const Header = () => {
   return (
@@ -188,7 +201,6 @@ const Header = () => {
         </Menu>
 
         <IconsContainer>
-          {/* Adicionando os ícones */}
           <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.375 2.57292C2.04708 2.57292 1.78125 2.83875 1.78125 3.16667C1.78125 3.49459 2.04708 3.76042 2.375 3.76042C3.02183 3.76042 3.58188 4.20967 3.7222 4.8411L4.06256 6.37276C4.06504 6.40995 4.07103 6.44713 4.08065 6.48382L4.12411 6.64971L4.17039 6.85797C4.17949 6.89891 4.19261 6.93792 4.20925 6.97467L5.53542 12.0364C5.96875 13.6903 7.4633 14.8438 9.17306 14.8438H13.2609C15.3377 14.8438 17.0213 13.1602 17.0213 11.0833V8.93846C17.0213 8.49206 16.9569 7.95346 16.654 7.47826C15.9725 6.40902 14.7836 5.73959 13.4832 5.73959H5.13833L4.88142 4.5835C4.62036 3.40874 3.57841 2.57292 2.375 2.57292Z" fill="white" />
             <path d="M14.25 16.625C14.25 17.0622 13.8956 17.4167 13.4583 17.4167C13.0211 17.4167 12.6667 17.0622 12.6667 16.625C12.6667 16.1878 13.0211 15.8333 13.4583 15.8333C13.8956 15.8333 14.25 16.1878 14.25 16.625Z" fill="white" />
