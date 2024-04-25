@@ -14,10 +14,11 @@ export const MaxWidthContainer = styled.div`
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  
+  margin: 0;
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    margin: 0 6rem;
   }
 `;
 
@@ -194,13 +195,14 @@ export const AreaClienteContainer = styled.div`
 `;
 
 export const StyledHR = styled.hr`
-  width: 100%;
+  width: 95%;
   /* max-width: 900px; */
   /* margin-top: 10px; */
   margin: 0 auto;
   border: none;
   height: 1px;
   background-color: white;
+  
 `;
 
 export const BottomFooterContainer = styled.div`
@@ -216,6 +218,11 @@ export const BottomFooterContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 2rem 4rem; 
+  }
+
+  .direitos{
+    margin-top: 5px;
   }
 
   span {
@@ -224,42 +231,7 @@ export const BottomFooterContainer = styled.div`
     font-weight: 200;
   }
 
-  .link-container {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-
-    a {
-      font-size: 0.75rem;
-      font-weight: 200;
-      color: white;
-      margin: 0 0.25rem;
-      text-decoration: none;
-      transition: color 0.3s;
-
-      &:hover {
-        color: #88BB76
-      }
-    }
-
-    span {
-      color: ${({ theme }) => theme.textColor};
-      margin: 0 0.25rem;
-    }
-  }
-
-  .link-container {
-  display: flex;
-  align-items: center; /* Para centralizar verticalmente os itens */
-  margin-top: 1rem;
-}
-
-.link-container > * {
-  display: inline-flex; /* Exibe os itens na mesma linha */
-  align-items: center; /* Alinha os itens verticalmente */
-}
-
-.link-container a,
+  .link-container a,
 .link-container span {
   font-size: 0.75rem;
   font-weight: 200;
@@ -276,6 +248,23 @@ export const BottomFooterContainer = styled.div`
 .link-container span {
   color: ${({ theme }) => theme.textColor};
 }
+
+  /* 
+
+  .link-container {
+  display: flex;
+  align-items: center; 
+  margin-top: 1rem;
+}
+
+.link-container > * {
+  display: inline-flex; 
+  align-items: center;
+}
+
+
+ */
+
 
 `;
 
