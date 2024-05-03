@@ -57,6 +57,7 @@ const IconsContainer = styled.div`
 
   svg {
     margin-right: 10px; 
+    cursor: pointer; 
   }
 `;
 
@@ -191,7 +192,7 @@ const Sidebar = styled.div<SidebarProps>`
   background-color: #f0f0f0;
   position: fixed;
   top: 0;
-  right: ${({ isOpen }) => (isOpen ? '0' : '-250px')};
+  right: ${({ isOpen }) => (isOpen ? '0' : '-300px')};
   transition: right 0.3s ease;
 `;
 
@@ -221,6 +222,10 @@ const CentralizedText = styled.div`
     margin-top: 20px;
   }
 `;
+
+const ArrowIcon = styled(MdArrowForwardIos)`
+cursor: pointer;
+`
 
 const Header = () => {
 
@@ -283,12 +288,13 @@ const Header = () => {
 
       <Sidebar isOpen={isSidebarOpen}>
         <BoxBlack>
-          <MdArrowForwardIos onClick={toggleSidebar} />
+          <ArrowIcon onClick={toggleSidebar}>
+          </ArrowIcon>
           <h1>Carrinho</h1>
         </BoxBlack>
 
-        <CentralizedText> 
-           <p>O carrinho está vazio</p>
+        <CentralizedText>
+          <p>O carrinho está vazio</p>
         </CentralizedText>
       </Sidebar>
     </Container>
