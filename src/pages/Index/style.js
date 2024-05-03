@@ -128,7 +128,7 @@ export const BlueBackground = styled.div`
 export const TextCardBlue = styled.div`
   position: absolute;
   left: 1rem;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
   width: calc(100% - 3rem);
   max-width: 42rem;
@@ -136,11 +136,14 @@ export const TextCardBlue = styled.div`
     font-size: 3rem;
     font-weight: 700;
     color: white;
+    margin-left: 20px;
+    margin-top: 1rem; 
   }
   @media (max-width: 768px) {
     display: none;
   }
 `;
+
 
 export const GreenFormContainer = styled.div`
   background-color: #88bb76;
@@ -284,11 +287,12 @@ export const StyledRadioWithMargin = styled(StyledRadio)`
 
 export const Header = styled.h2`
   font-size: 0.875rem;
-  font-weight: 600; 
-  color: #fff; 
-  text-transform: uppercase; 
-  position: relative; 
-  margin-top: -1rem; 
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 1rem; 
+  margin-left: 20px;
 `;
 
 export const GreenLine = styled.div`
@@ -296,5 +300,6 @@ export const GreenLine = styled.div`
   width: 100px; 
   background-color: #88BB76; 
   margin-top: 0.4rem;
+  margin-left: 20px;
   /* margin-top: -0.94rem; */
 `;
