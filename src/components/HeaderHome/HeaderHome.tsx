@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../../assets/logo.png';
 import backgroundImage from '../../assets/imagem.png';
-import { ArrowIcon, BoxBlack, CentralizedContainer, CentralizedText, Container, ContentContainer, GreenText, IconsContainer, Image, ImageContainer, Logo, Menu, MenuWrapper, Subtitle, TextContainer, Title } from './styles';
+import { ArrowIcon, BoxBlack, CentralizedContainer, CentralizedText, Container, ContentContainer, ContentWrapper, GreenText, IconsContainer, Image, ImageContainer, Logo, Menu, MenuWrapper, Subtitle, TextContainer, Title } from './styles';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -66,6 +66,7 @@ const Header = () => {
 
         </IconsContainer>
       </MenuWrapper>
+      <ContentWrapper>
       <ContentContainer>
         <TextContainer>
           <Title>
@@ -77,6 +78,7 @@ const Header = () => {
           <Image src={backgroundImage} alt="Background" />
         </ImageContainer>
       </ContentContainer>
+      </ContentWrapper>
 
       <Sidebar isOpen={isSidebarOpen}>
         <BoxBlack>

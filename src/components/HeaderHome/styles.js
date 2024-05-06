@@ -157,25 +157,35 @@ export const Image = styled.img`
 `;
 
 
+export const ContentWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+
+
+  @media only screen and (min-width : 1400px) {
+  margin-left: 160px; 
+  margin-right: 20px; 
+}
+`;
 
 export const ContentContainer = styled.div`
-display: flex;
-flex-direction: row;
-align-items: flex-start; /* Mudado para flex-start para evitar que a imagem ultrapasse o contêiner */
-justify-content: space-between; 
-width: 100%;
-margin-top: 40px; 
-
-@media (max-width: 768px) {
-  flex-direction: column; /* Mudado para column em telas menores */
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-top: 20px;
-}
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
 
-@media (min-width: 769px) and (max-width: 1406px) {
-  flex-direction: column; /* Mudado para column em telas entre 769px e 1406px */
-  align-items: center;
-}
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1406px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 
