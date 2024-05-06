@@ -192,16 +192,7 @@ export const StyledInput = styled.input`
   font-size: 14px; /* Tamanho da fonte ajustável para dispositivos móveis */
 `;
 
-export const StyledTextArea = styled.textarea`
-  border: 1px solid #cbd5e0;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  width: calc(100% - 2 * 0.5rem);
-  margin-bottom: 1rem;
-  resize: none;
-  outline: none;
-  font-size: 14px; /* Tamanho da fonte ajustável para dispositivos móveis */
-`;
+
 
 export const SubmitButton = styled.button`
   background-color: #265094;
@@ -228,7 +219,8 @@ export const StyledSelect = styled.select`
   width: calc(100% - 2 * 0.5rem);
   margin-bottom: 1rem;
   outline: none;
-  font-size: 14px; /* Tamanho da fonte ajustável para dispositivos móveis */
+  font-size: 14px; 
+  flex: 2;
 `;
 
 export const BlueText = styled.label`
@@ -266,16 +258,17 @@ export const StyledRadio = styled.input`
     }
 `;
 
-// Criando um novo componente para o container dos campos lado a lado
 export const FieldsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: center; /* Para alinhar os itens verticalmente */
+  gap: 1rem; /* Adiciona um espaçamento entre os campos */
   width: 100%;
 `;
 
+
 // Estilizando os campos "Sobre o imóvel" e "Título do imóvel"
 export const StyledSelectWithMargin = styled(StyledSelect)`
-  margin-right: 1rem;
+  flex: 1; /* Ocupa o espaço disponível */
 `;
 
 // Estilizando os campos "Sobre o imóvel" e "Título do imóvel"
