@@ -156,6 +156,7 @@ export const GreenFormContainer = styled.div`
   top: -2rem;
   right: 4rem;
   margin-bottom: -2rem;
+  height: 600px;
 `;
 
 export const ResponsiveGreenFormContainer = styled(GreenFormContainer)`
@@ -186,10 +187,10 @@ export const StyledInput = styled.input`
   border: 1px solid #cbd5e0;
   border-radius: 1rem;
   padding: 0.5rem;
-  width: calc(100% - 2 * 0.5rem);
+  width: 100%; 
   margin-bottom: 1rem;
   outline: none;
-  font-size: 14px; /* Tamanho da fonte ajustável para dispositivos móveis */
+  font-size: 14px; 
 `;
 
 
@@ -260,13 +261,12 @@ export const StyledRadio = styled.input`
 
 export const FieldsContainer = styled.div`
   display: flex;
-  align-items: center; /* Para alinhar os itens verticalmente */
-  gap: 1rem; /* Adiciona um espaçamento entre os campos */
+  align-items: center; 
+  gap: 1rem; 
   width: 100%;
 `;
 
 
-// Estilizando os campos "Sobre o imóvel" e "Título do imóvel"
 export const StyledSelectWithMargin = styled(StyledSelect)`
   flex: 1; /* Ocupa o espaço disponível */
 `;

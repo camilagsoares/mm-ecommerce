@@ -10,9 +10,8 @@ export function Index() {
 
   const [hovered, setHovered] = useState(false);
 
-
   return (
-    <div  style={{ overflow: 'hidden' }}>
+    <div style={{ overflow: 'hidden' }}>
 
       <TitleComponent title="PRODUTOS" />
 
