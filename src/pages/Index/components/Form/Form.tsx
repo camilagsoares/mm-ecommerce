@@ -1,4 +1,4 @@
-import { ContainerForm, BlueBackground, ResponsiveGreenFormContainer, StyledInput, StyledTextArea, SubmitButton, TextCardBlue, ContainerFormBlue, StyledSelect, Title, BlueText, StyledRadio, StyledSelectWithMargin, FieldsContainer, Header, GreenLine } from "../../style"
+import { ContainerForm, BlueBackground, ResponsiveGreenFormContainer, StyledInput, SubmitButton, TextCardBlue, ContainerFormBlue, StyledSelect, Title, BlueText, StyledRadio, StyledSelectWithMargin, FieldsContainer, Header, GreenLine } from "../../style"
 
 export function Form() {
 
@@ -47,25 +47,33 @@ export function Form() {
                                     </div>
                                 </FieldsContainer>
                             </div>
-                            <div>
-                                <StyledInput type="text" id="ultimaFatura" name="ultimaFatura" placeholder="Última Fatura:" />
-                            </div>
+                            <FieldsContainer>
+                                    <div>
+                                    <label htmlFor="endereco">Última Fatura</label>
+
+                                        <StyledInput type="text" id="ultimaFatura" name="ultimaFatura" placeholder="Última Fatura:" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="endereco">Endereço:</label>
+                                        <StyledInput type="text" id="endereco" name="endereco" />
+                                    </div>
+                                </FieldsContainer>
                             <div>
                                 <label htmlFor="name">Nome:</label>
                                 <StyledInput type="text" id="name" name="name" />
                             </div>
-                            <div>
-                                <label htmlFor="email">E-mail:</label>
-                                <StyledInput type="email" id="email" name="email" />
-                            </div>
-                            <div>
-                                <label htmlFor="phone">Telefone:</label>
-                                <StyledInput type="text" id="phone" name="phone" />
-                            </div>
 
-                            <div>
-                                <StyledTextArea id="message" rows={4} placeholder="Mensagem:" name="message" />
-                            </div>
+
+                            <FieldsContainer>
+                                    <div>
+                                    <label htmlFor="email">E-mail:</label>
+                                <StyledInput type="email" id="email" name="email" />
+                                    </div>
+                                    <div>
+                                    <label htmlFor="phone">Telefone:</label>
+                                <StyledInput type="text" id="phone" name="phone" />
+                                    </div>
+                                </FieldsContainer>
                             <SubmitButton type="submit">Enviar</SubmitButton>
                         </form>
                     </ResponsiveGreenFormContainer>

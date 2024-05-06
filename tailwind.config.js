@@ -15,7 +15,6 @@ module.exports = {
       btnBlue: "#265094",
       textH3: "#323134",
       textCinza: "#66666B"
-      
     },
     },
   },
