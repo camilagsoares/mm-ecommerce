@@ -58,16 +58,20 @@ export const DetailsProduct = () => {
       </ImageContainer>
       <ProductInfo>
         <h2>{product.name}</h2>
-        <DescriptionParagraph>{product.description}</DescriptionParagraph>
-        <DescriptionParagraph>{product.moreDescriptionTwo}</DescriptionParagraph>
-        <DescriptionParagraph>{product.moreDescriptionThree}</DescriptionParagraph>
 
         <Price>
           <StrikedPrice>R$ {strikedPrice}</StrikedPrice>
           <NormalPrice>R$ {normalPrice}</NormalPrice>
         </Price>
 
+        <DescriptionParagraph>{product.description}</DescriptionParagraph>
+        <DescriptionParagraph>{product.moreDescriptionTwo}</DescriptionParagraph>
+        <DescriptionParagraph>{product.moreDescriptionThree}</DescriptionParagraph>
+
+        
+        <label>Quantidade</label>
         <QuantityContainer>
+         
           <QuantityButton onClick={decrementQuantity}>-</QuantityButton>
           <span>{quantity}</span>
           <QuantityButton onClick={incrementQuantity}>+</QuantityButton>
