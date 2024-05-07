@@ -13,10 +13,10 @@ export function AboutUs() {
         <TitleComponent title="Sobre nós" />
         <TextoCentral description="A M&M Soluções é uma empresa especializada em desenvolver soluções completas, hardwares e softwares, para o setor industrial. Atuante no mercado desde 2017 desenvolvendo soluções e parcerias sólidas visando a satisfação do cliente. Possui um espírito inovador e sempre busca a excelência para se tornar referência no Mercado de soluções tecnológicas." />
 
-        <TitleComponent title="NOSSO PROPÓSITO" />
-        <TextoCentral description="Trazer soluções sustentáveis na área de tecnologia para o planeta." />
+        {/* <TitleComponent title="NOSSO PROPÓSITO" />
+        <TextoCentral description="Trazer soluções sustentáveis na área de tecnologia para o planeta." /> */}
 
-        <TitleComponent title="O QUE NOS DIFERENCIA:" />
+        {/* <TitleComponent title="O QUE NOS DIFERENCIA:" />
 
         <div className="flex items-center justify-center">
           <div className="mt-8 w-3/4">
@@ -31,7 +31,7 @@ export function AboutUs() {
               </ul>
             </p>
           </div>
-        </div>
+        </div> */}
 
       </div>
 
