@@ -1,20 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { ButtonAdd, ButtonComprar, Container, DescriptionParagraph, NormalPrice, Price, ProductImage, ProductInfo, StrikedPrice, QuantityContainer, QuantityButton, SmallImage, ImageContainer, AdditionalInfo, SmallImagesContainer } from "./styles";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+  ButtonAdd,
+  ButtonComprar,
+  Container,
+  DescriptionParagraph,
+  NormalPrice,
+  Price,
+  ProductImage,
+  ProductInfo,
+  StrikedPrice,
+  QuantityContainer,
+  QuantityButton,
+  SmallImage,
+  ImageContainer,
+  AdditionalInfo,
+  SmallImagesContainer,
+} from "./styles";
 import { Product, products } from "./products";
-
 
 export const DetailsProduct = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const [product, setProduct] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState<number>(1);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [cartItems, setCartItems] = useState<{ product: Product; quantity: number }[]>([]);
 
   useEffect(() => {
     const getProductDetails = async (productId: number) => {
-
-
-      const foundProduct = products.find(product => product.id === Number(productId));
+      const foundProduct = products.find((product) => product.id === Number(productId));
       setProduct(foundProduct || null);
       setSelectedImage(foundProduct?.image || null);
     };
@@ -22,20 +37,33 @@ export const DetailsProduct = () => {
     getProductDetails(Number(id));
   }, [id]);
 
-  const [strikedPrice, normalPrice] = product?.price ? product.price.split(',') : ['', ''];
+  const [strikedPrice, normalPrice] = product?.price ? product.price.split(",") : ["", ""];
 
   const incrementQuantity = () => {
-    setQuantity(prevQuantity => prevQuantity + 1);
+    setQuantity((prevQuantity) => prevQuantity + 1);
   };
 
   const decrementQuantity = () => {
     if (quantity > 1) {
-      setQuantity(prevQuantity => prevQuantity - 1);
+      setQuantity((prevQuantity) => prevQuantity - 1);
     }
   };
 
   const handleImageClick = (image: string) => {
     setSelectedImage(image);
+  };
+
+  const addToCart = () => {
+    const itemIndex = cartItems.findIndex((item) => item.product.id === product?.id);
+    if (itemIndex !== -1) {
+      const updatedCart = [...cartItems];
+      updatedCart[itemIndex].quantity += quantity;
+      setCartItems(updatedCart);
+      console.log(setCartItems)
+    } else {
+      setCartItems((prevItems) => [...prevItems, { product: product!, quantity }]);
+    }
+    navigate("/carrinho");
   };
 
   if (!product) {
@@ -68,19 +96,17 @@ export const DetailsProduct = () => {
         <DescriptionParagraph>{product.moreDescriptionTwo}</DescriptionParagraph>
         <DescriptionParagraph>{product.moreDescriptionThree}</DescriptionParagraph>
 
-        
         <label>Quantidade</label>
         <QuantityContainer>
-         
           <QuantityButton onClick={decrementQuantity}>-</QuantityButton>
           <span>{quantity}</span>
           <QuantityButton onClick={incrementQuantity}>+</QuantityButton>
         </QuantityContainer>
 
-        <ButtonAdd>Adicionar ao Carrinho</ButtonAdd>
+        <ButtonAdd onClick={addToCart}>Adicionar ao Carrinho</ButtonAdd>
         <ButtonComprar>Comprar</ButtonComprar>
       </ProductInfo>
-    </Container>
 
+    </Container>
   );
 };

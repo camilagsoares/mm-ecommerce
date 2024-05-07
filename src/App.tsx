@@ -13,6 +13,7 @@ import { Envio } from './pages/Envio/Envio';
 import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade/PoliticaPrivacidade';
 import { Seguranca } from './pages/Seguranca/Seguranca';
 import { DetailsProduct } from './pages/DetailsProduct/DetailsProduct';
+import {Cart}  from './pages/Cart/Cart';
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         <Route path="/seguranca" element={<CommonLayout><Seguranca /></CommonLayout>} />
         <Route path="*" element={<CommonLayout><Error /></CommonLayout>} />
         <Route path='/produto/:id' element={<CommonLayout><DetailsProduct /></CommonLayout>}></Route>
-      </Routes>
+        <Route path='/carrinho' element={<CommonLayout><Cart /></CommonLayout>}></Route>
+    </Routes>
     </Router>
   );
 }
