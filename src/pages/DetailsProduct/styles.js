@@ -7,32 +7,40 @@ export const Container = styled.div`
 export const ImageContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  flex-direction: row; /* Agora em linha para manter ProductImage e SmallImagesContainer lado a lado */
+  flex-direction: row; 
 `;
 
 export const SmallImagesContainer = styled.div`
   display: flex;
-  flex-direction: column; /* Para manter os SmallImage em coluna vertical */
+  flex-direction: column;
 `;
 export const ProductImage = styled.div`
   flex: 1;
-  margin-right: 20px; /* Espaço entre a imagem principal e as imagens menores */
+  margin-left: 20px; 
 `;
 
 export const AdditionalInfo = styled.div`
-  margin-left: 20px; /* Espaço entre as imagens menores e as informações adicionais */
+  margin-left: 20px; 
 `;
 
 export const ProductInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 20px; /* Espaço entre as informações adicionais e as imagens */
+  margin-left: 20px; 
+
+  h2{
+    font-size: 1.7rem;
+  }
+
+  label{
+font-size: 14px;
+}
 `;
 
 export const DescriptionParagraph = styled.p`
   margin-top: 10px;
-  font-size: 1.4rem;
+  font-size: 1rem;
 `;
 
 export const Price = styled.p`
@@ -56,7 +64,7 @@ export const ButtonAdd = styled.button`
   height: 44px;
   color: white;
   transition: background-color 0.3s;
-  margin-top: 10px; /* Espaço entre o botão Adicionar e o próximo botão */
+  margin-top: 10px; 
 
   &:hover {
     background-color: #a5a9a6;
@@ -70,25 +78,31 @@ export const ButtonComprar = styled.button`
   height: 44px;
   color: white;
   transition: background-color 0.3s;
-  margin-top: 10px; /* Espaço entre o botão Comprar e o próximo elemento */
+  margin-top: 10px; 
 
   &:hover {
     background-color: #5e625f;
   }
 `;
 
+
+
 export const QuantityContainer = styled.div`
   display: flex;
   align-items: center;
+  border: 1px solid black;
+  height: 43px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 `;
 
 export const QuantityButton = styled.button`
   width: 30px;
   height: 30px;
-  background-color: #ccc;
-  border: none;
+  /* background-color: #ccc; */
   border-radius: 5px;
-  margin: 0 5px;
+  border: none;
+  margin: 0 12px;
   cursor: pointer;
 `;
 
