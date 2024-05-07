@@ -18,6 +18,8 @@ import {
   SmallImagesContainer,
 } from "./styles";
 import { Product, products } from "./products";
+import { CartProvider, useCart } from '../Cart/CartItems';
+
 
 export const DetailsProduct = () => {
   const { id } = useParams<{ id: string }>();
@@ -25,7 +27,7 @@ export const DetailsProduct = () => {
   const [product, setProduct] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState<number>(1);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [cartItems, setCartItems] = useState<{ product: Product; quantity: number }[]>([]);
+  const { cartItems, setCartItems } = useCart(); // Usando o hook useCart para acessar o contexto do carrinho
 
   useEffect(() => {
     const getProductDetails = async (productId: number) => {
@@ -59,13 +61,16 @@ export const DetailsProduct = () => {
       const updatedCart = [...cartItems];
       updatedCart[itemIndex].quantity += quantity;
       setCartItems(updatedCart);
-      console.log(setCartItems)
     } else {
-      setCartItems((prevItems) => [...prevItems, { product: product!, quantity }]);
+      setCartItems((prevItems) => [
+        ...prevItems,
+        { product: product!, quantity, image: selectedImage!, price:  product!.price.toString() }
+      ]);
     }
     navigate("/carrinho");
   };
-
+  
+  
   if (!product) {
     return <div>Carregando...</div>;
   }

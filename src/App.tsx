@@ -13,25 +13,29 @@ import { Envio } from './pages/Envio/Envio';
 import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade/PoliticaPrivacidade';
 import { Seguranca } from './pages/Seguranca/Seguranca';
 import { DetailsProduct } from './pages/DetailsProduct/DetailsProduct';
-import {Cart}  from './pages/Cart/Cart';
+import { Cart } from './pages/Cart/Cart';
+import { CartProvider } from './pages/Cart/CartItems';
 
 function App() {
   return (
 
     <Router>
-      <Routes>
-      <Route path="/" element={<Layout children={<Index />} />}>
-          <Route index element={<Index />} />
-        </Route>
-        <Route path="/sobre-nos" element={<CommonLayout><AboutUs /></CommonLayout>} />
-        <Route path="/troca-devolucao" element={<CommonLayout><TrocaDevolucao /></CommonLayout>} />
-        <Route path="/envio" element={<CommonLayout><Envio /></CommonLayout>} />
-        <Route path="/politica-privacidade" element={<CommonLayout><PoliticaPrivacidade /></CommonLayout>} />
-        <Route path="/seguranca" element={<CommonLayout><Seguranca /></CommonLayout>} />
-        <Route path="*" element={<CommonLayout><Error /></CommonLayout>} />
-        <Route path='/produto/:id' element={<CommonLayout><DetailsProduct /></CommonLayout>}></Route>
-        <Route path='/carrinho' element={<CommonLayout><Cart /></CommonLayout>}></Route>
-    </Routes>
+      <CartProvider>
+        <Routes>
+          <Route path="/" element={<Layout children={<Index />} />}>
+            <Route index element={<Index />} />
+          </Route>
+          <Route path="/sobre-nos" element={<CommonLayout><AboutUs /></CommonLayout>} />
+          <Route path="/troca-devolucao" element={<CommonLayout><TrocaDevolucao /></CommonLayout>} />
+          <Route path="/envio" element={<CommonLayout><Envio /></CommonLayout>} />
+          <Route path="/politica-privacidade" element={<CommonLayout><PoliticaPrivacidade /></CommonLayout>} />
+          <Route path="/seguranca" element={<CommonLayout><Seguranca /></CommonLayout>} />
+          <Route path="*" element={<CommonLayout><Error /></CommonLayout>} />
+          <Route path='/produto/:id' element={<CommonLayout><DetailsProduct /></CommonLayout>}></Route>
+          <Route path='/carrinho' element={<CommonLayout><Cart /></CommonLayout>}></Route>
+        </Routes>
+      </CartProvider>
+
     </Router>
   );
 }
