@@ -12,6 +12,7 @@ import { TrocaDevolucao } from './pages/TrocaDevolucao/TrocaDevolucao'
 import { Envio } from './pages/Envio/Envio';
 import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade/PoliticaPrivacidade';
 import { Seguranca } from './pages/Seguranca/Seguranca';
+import { DetailsProduct } from './pages/DetailsProduct/DetailsProduct';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/politica-privacidade" element={<CommonLayout><PoliticaPrivacidade /></CommonLayout>} />
         <Route path="/seguranca" element={<CommonLayout><Seguranca /></CommonLayout>} />
         <Route path="*" element={<CommonLayout><Error /></CommonLayout>} />
+        <Route path='/produto/:id' element={<CommonLayout><DetailsProduct /></CommonLayout>}></Route>
       </Routes>
     </Router>
   );
