@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../../assets/logo.png';
 import backgroundImage from '../../assets/imagem.png';
-import { ArrowIcon, BoxBlack, CentralizedContainer, CentralizedText, Container, ContentContainer, ContentWrapper, GreenText, IconsContainer, Image, ImageContainer, Logo, Menu, MenuWrapper, Subtitle, TextContainer, Title } from './styles';
+import { ArrowIcon, BoxBlack, CentralizedContainer, CentralizedText, Container, ContentContainer, ContentWrapper, GreenText, IconsContainer, Image, ImageContainer,  Logo, Menu, MenuWrapper, Subtitle, TextContainer, Title } from './styles';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -30,6 +30,7 @@ const Header = () => {
   return (
     <Container>
       <MenuWrapper>
+     
         <Logo src={logo} alt="Logo" />
         <Menu>
           <ul>
@@ -44,7 +45,6 @@ const Header = () => {
             </li>
           </ul>
         </Menu>
-
         <IconsContainer>
           <button onClick={toggleSidebar}>
             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,17 +67,17 @@ const Header = () => {
         </IconsContainer>
       </MenuWrapper>
       <ContentWrapper>
-      <ContentContainer>
-        <TextContainer>
-          <Title>
-            <GreenText>Soluções sustentáveis</GreenText> em energia solar.
-          </Title>
-          <Subtitle><b>Deixe o sol pagar sua conta de energia!</b> Solicite um orçamento</Subtitle>
-        </TextContainer>
-        <ImageContainer>
-          <Image src={backgroundImage} alt="Background" />
-        </ImageContainer>
-      </ContentContainer>
+        <ContentContainer>
+          <TextContainer>
+            <Title>
+              <GreenText>Soluções sustentáveis</GreenText> em energia solar.
+            </Title>
+            <Subtitle><b>Deixe o sol pagar sua conta de energia!</b> Solicite um orçamento</Subtitle>
+          </TextContainer>
+          <ImageContainer>
+            <Image src={backgroundImage} alt="Background" />
+          </ImageContainer>
+        </ContentContainer>
       </ContentWrapper>
 
       <Sidebar isOpen={isSidebarOpen}>
