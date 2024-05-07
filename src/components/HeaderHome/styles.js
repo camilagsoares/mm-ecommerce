@@ -104,13 +104,13 @@ margin-top: 20px;
   width: calc(50% - 20px);
   margin-right: 20px;
   align-items: flex-start; 
-  order: 1; /* Altera a ordem para 1 em telas maiores */
+  order: 1; 
 }
 `;
 
 export const ImageContainer = styled.div`
   width: 100%;
-  order: 2; /* Altera a ordem para 2 em telas maiores */
+  order: 2; 
 
   @media (min-width: 769px) {
     max-width: calc(50% - 10px);
@@ -129,6 +129,12 @@ export const Title = styled.h1`
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }
+
+  @media (min-width: 796px) and (max-width: 915px) {
+    font-size: 3rem;
+
+  }
+
 `;
 
 
