@@ -12,17 +12,34 @@ h2 {
 
 hr { 
     margin-top: 10px;
+    margin-bottom: 40px;
 }
 `;
 
 export const CartInfo = styled.div`
   flex: 1;
 
-  img{
+  img {
     width: 100px;
     height: 100px;
+    margin-right: 10px; /* Add margin to separate the image from the text */
+  }
+
+  .item-info {
+    display: flex; /* Display title, price, and image in a row */
+    align-items: center; /* Center items vertically */
+  }
+
+  .item-info-details {
+    display: flex;
+    flex-direction: column; /* Stack title and price vertically */
+  }
+
+  .item-info-details span {
+    margin-bottom: 5px; /* Add margin between the title and price */
   }
 `;
+
 
 export const OrderSummary = styled.div`
   flex: 0 0 300px;
