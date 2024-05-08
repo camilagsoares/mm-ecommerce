@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useCart } from "./CartItems";
-import { CartContainer, CartInfo, OrderSummary } from './styles'
+import { ButtonAdd, CartContainer, CartInfo, OrderSummary } from './styles'
+import { Link } from "react-router-dom";
 
 export const Cart = () => {
 
@@ -33,7 +34,7 @@ export const Cart = () => {
         <h2>Meu carrinho</h2>
 
         <hr />
-        
+
         <ul>
           {cartItems.map((item, index) => (
             <li key={index}>
@@ -49,9 +50,9 @@ export const Cart = () => {
           ))}
         </ul>
 
-        
+
         <hr />
-            <div>
+        <div>
           <button onClick={togglePromoCodeInput}>Insira o código promocional</button>
           {promoCodeInputVisible && (
             <input type="text" value={promoCode} onChange={handlePromoCodeChange} />
@@ -70,8 +71,10 @@ export const Cart = () => {
         <p>Subtotal</p>
         <p>Entrega</p>
         <hr />
-        <p>Total   (VALOR)</p>
-        <button>Checkout</button>
+        <p>Total (VALOR)</p>
+        <Link to="/checkout">
+          <ButtonAdd>Checkout</ButtonAdd>
+        </Link>
       </OrderSummary>
     </CartContainer>
   )

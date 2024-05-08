@@ -45,3 +45,17 @@ export const OrderSummary = styled.div`
   flex: 0 0 300px;
   margin-left: 20px;
 `;
+
+export const ButtonAdd = styled.button`
+  background-color: #5e625f;
+  text-align: center;
+  width: 320px;
+  height: 44px;
+  color: white;
+  transition: background-color 0.3s;
+  margin-top: 10px; 
+
+  &:hover {
+    background-color: #a5a9a6;
+  }
+`;

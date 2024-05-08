@@ -15,6 +15,7 @@ import { Seguranca } from './pages/Seguranca/Seguranca';
 import { DetailsProduct } from './pages/DetailsProduct/DetailsProduct';
 import { Cart } from './pages/Cart/Cart';
 import { CartProvider } from './pages/Cart/CartItems';
+import { PageCheckout } from './pages/Checkout/PageCheckout';
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
           <Route path="*" element={<CommonLayout><Error /></CommonLayout>} />
           <Route path='/produto/:id' element={<CommonLayout><DetailsProduct /></CommonLayout>}></Route>
           <Route path='/carrinho' element={<CommonLayout><Cart /></CommonLayout>}></Route>
+          <Route path='/checkout' element={<CommonLayout><PageCheckout /></CommonLayout>}></Route>
+
         </Routes>
       </CartProvider>
 
