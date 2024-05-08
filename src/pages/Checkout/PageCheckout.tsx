@@ -1,6 +1,6 @@
 import React from "react";
 import { useCart } from "../Cart/CartItems";
-import { CheckoutContainer, CustomerInfoContainer, InputField, Label, LabeledInputField, LabeledSelect, ProductInfoContainer } from "./styles";
+import { CheckoutContainer, CustomerInfoContainer, InputField, Label, LabeledInputField, LabeledSelect, ProductInfoContainer,LoginLink,ButtonComprar } from "./styles";
 import { FormControl,Select, MenuItem } from "@mui/material"; 
 
 
@@ -20,6 +20,9 @@ export const PageCheckout = () => {
   return (
     <CheckoutContainer>
       <CustomerInfoContainer>
+        <LoginLink>
+          <p>Tem uma conta? <a>Faça login</a></p>
+        </LoginLink>
         <h3>Informações do cliente</h3>
         <LabeledInputField>
           <Label>Email</Label>
@@ -39,6 +42,7 @@ export const PageCheckout = () => {
         </LabeledInputField>
         <LabeledSelect>
       <Label>País/região</Label>
+
       <FormControl fullWidth>
         <Select
           labelId="country-select-label"
@@ -54,6 +58,28 @@ export const PageCheckout = () => {
         </Select>
       </FormControl>
     </LabeledSelect>
+    <LabeledInputField>
+          <Label>Endereço</Label>
+          <InputField />
+        </LabeledInputField>
+        <LabeledInputField>
+          <Label>Número</Label>
+          <InputField />
+        </LabeledInputField>
+        <LabeledInputField>
+          <Label>Cidade</Label>
+          <InputField />
+        </LabeledInputField>
+        <LabeledInputField>
+          <Label>Estado</Label>
+          <InputField />
+        </LabeledInputField>
+        <LabeledInputField>
+          <Label>Código postal (CEP)</Label>
+          <InputField />
+        </LabeledInputField>
+        <ButtonComprar>Continuar</ButtonComprar>
+
       </CustomerInfoContainer>
 
       <ProductInfoContainer>
