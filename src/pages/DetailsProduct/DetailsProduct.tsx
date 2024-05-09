@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   ButtonAdd,
   ButtonComprar,
@@ -16,6 +16,8 @@ import {
   ImageContainer,
   AdditionalInfo,
   SmallImagesContainer,
+  TextHome,
+  ArrowIcon
 } from "./styles";
 import { Product, products } from "./products";
 import { CartProvider, useCart } from '../Cart/CartItems';
@@ -64,54 +66,64 @@ export const DetailsProduct = () => {
     } else {
       setCartItems((prevItems) => [
         ...prevItems,
-        { product: product!, quantity, image: selectedImage!, price:  product!.price.toString() }
+        { product: product!, quantity, image: selectedImage!, price: product!.price.toString() }
       ]);
     }
     navigate("/carrinho");
   };
-  
-  
+
+
   if (!product) {
     return <div>Carregando...</div>;
   }
 
   return (
-    <Container>
-      <ImageContainer>
-        <SmallImagesContainer>
-          {product.images.map((image, index) => (
-            <SmallImage key={index} onClick={() => handleImageClick(image)}>
-              <img src={image} alt={`Thumbnail ${index}`} />
-            </SmallImage>
-          ))}
-        </SmallImagesContainer>
-        <ProductImage>
-          <img src={selectedImage ? selectedImage : undefined} alt={product.name} />
-        </ProductImage>
-      </ImageContainer>
-      <ProductInfo>
-        <h2>{product.name}</h2>
+    <div>
 
-        <Price>
-          <StrikedPrice>R$ {strikedPrice}</StrikedPrice>
-          <NormalPrice>R$ {normalPrice}</NormalPrice>
-        </Price>
+      <Link to="/">
+        <TextHome>Home <ArrowIcon>
+        </ArrowIcon>   {product.name}
+        </TextHome>
+      </Link>
 
-        <DescriptionParagraph>{product.description}</DescriptionParagraph>
-        <DescriptionParagraph>{product.moreDescriptionTwo}</DescriptionParagraph>
-        <DescriptionParagraph>{product.moreDescriptionThree}</DescriptionParagraph>
+      <Container>
 
-        <label>Quantidade</label>
-        <QuantityContainer>
-          <QuantityButton onClick={decrementQuantity}>-</QuantityButton>
-          <span>{quantity}</span>
-          <QuantityButton onClick={incrementQuantity}>+</QuantityButton>
-        </QuantityContainer>
+        <ImageContainer>
+          <SmallImagesContainer>
+            {product.images.map((image, index) => (
+              <SmallImage key={index} onClick={() => handleImageClick(image)}>
+                <img src={image} alt={`Thumbnail ${index}`} />
+              </SmallImage>
+            ))}
+          </SmallImagesContainer>
+          <ProductImage>
+            <img src={selectedImage ? selectedImage : undefined} alt={product.name} />
+          </ProductImage>
+        </ImageContainer>
+        <ProductInfo>
+          <h2>{product.name}</h2>
 
-        <ButtonAdd onClick={addToCart}>Adicionar ao Carrinho</ButtonAdd>
-        <ButtonComprar>Comprar</ButtonComprar>
-      </ProductInfo>
+          <Price>
+            <StrikedPrice>R$ {strikedPrice}</StrikedPrice>
+            <NormalPrice>R$ {normalPrice}</NormalPrice>
+          </Price>
 
-    </Container>
+          <DescriptionParagraph>{product.description}</DescriptionParagraph>
+          <DescriptionParagraph>{product.moreDescriptionTwo}</DescriptionParagraph>
+          <DescriptionParagraph>{product.moreDescriptionThree}</DescriptionParagraph>
+
+          <label>Quantidade</label>
+          <QuantityContainer>
+            <QuantityButton onClick={decrementQuantity}>-</QuantityButton>
+            <span>{quantity}</span>
+            <QuantityButton onClick={incrementQuantity}>+</QuantityButton>
+          </QuantityContainer>
+
+          <ButtonAdd onClick={addToCart}>Adicionar ao Carrinho</ButtonAdd>
+          <ButtonComprar>Comprar</ButtonComprar>
+        </ProductInfo>
+
+      </Container>
+    </div>
   );
 };

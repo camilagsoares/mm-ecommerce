@@ -1,3 +1,4 @@
+import { MdArrowForwardIos } from "react-icons/md";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -35,6 +36,7 @@ export const ProductInfo = styled.div`
 
   label{
 font-size: 14px;
+margin-top: 12px;
 }
 `;
 
@@ -93,7 +95,7 @@ export const QuantityContainer = styled.div`
   border: 1px solid black;
   height: 43px;
   margin-top: 3px;
-  margin-bottom: 3px;
+  margin-bottom: 8px;
 `;
 
 export const QuantityButton = styled.button`
@@ -121,3 +123,14 @@ export const SmallImage = styled.div`
     border-color: #333;
   }
 `;
+
+export const TextHome = styled.p`
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+`
+
+export const ArrowIcon = styled(MdArrowForwardIos)`
+font-size: 12px;
+margin: 5px;
+`

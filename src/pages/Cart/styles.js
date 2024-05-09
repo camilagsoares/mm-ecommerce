@@ -32,13 +32,19 @@ export const CartInfo = styled.div`
 
   .item-info-details {
     display: flex;
-    flex-direction: column; /* Stack title and price vertically */
+    flex-direction: column; /* Stack title, price, and quantity vertically */
   }
 
   .item-info-details span {
-    margin-bottom: 5px; /* Add margin between the title and price */
+    margin-bottom: 5px; /* Add margin between the title, price, and quantity */
+  }
+
+  .actions {
+    margin-top: 20px; /* Add some space between the items and the buttons */
+    align-self: flex-end; /* Move the actions to the bottom of the container */
   }
 `;
+
 
 
 export const OrderSummary = styled.div`

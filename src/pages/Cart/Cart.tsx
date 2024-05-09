@@ -30,46 +30,40 @@ export const Cart = () => {
 
   return (
     <CartContainer>
-      <CartInfo>
-        <h2>Meu carrinho</h2>
-
-        <hr />
-
-        <ul>
-          {cartItems.map((item, index) => (
-            <li key={index}>
-              <div className="item-info">
-                <img src={item.image} alt={item.product.name} />
-                <div className="item-info-details">
-                  <span>{item.product.name}</span>
-                  <span>Preço: {item.price}</span>
-                </div>
-              </div>
-              <span>Quantidade: {item.quantity}</span>
-            </li>
-          ))}
-        </ul>
-
-
-        <hr />
-        <div>
-          <button onClick={togglePromoCodeInput}>Insira o código promocional</button>
-          {promoCodeInputVisible && (
-            <input type="text" value={promoCode} onChange={handlePromoCodeChange} />
-          )}
+<CartInfo>
+  <h2>Meu carrinho</h2>
+  <hr />
+  <ul>
+    {cartItems.map((item, index) => (
+      <li key={index}>
+        <div className="item-info">
+          <img src={item.image} alt={item.product.name} />
+          <div className="item-info-details">
+            <span>{item.product.name}</span>
+            <span>Preço: {item.price}</span>
+            <span>Quantidade: {item.quantity}</span> {/* Movido para dentro da item-info-details */}
+          </div>
         </div>
-        <div>
-          <button onClick={toggleObservationInput}>Adicione uma observação</button>
-          {observationInputVisible && (
-            <textarea value={observation} onChange={handleObservationChange} />
-          )}
-        </div>
-      </CartInfo>
+      </li>
+    ))}
+  </ul>
+  <hr />
+  <div className="actions">
+    <button onClick={togglePromoCodeInput}>Insira o código promocional</button>
+    {promoCodeInputVisible && (
+      <input type="text" value={promoCode} onChange={handlePromoCodeChange} />
+    )}
+    <button onClick={toggleObservationInput}>Adicione uma observação</button>
+    {observationInputVisible && (
+      <textarea value={observation} onChange={handleObservationChange} />
+    )}
+  </div>
+</CartInfo>
       <OrderSummary>
         <h2>Resumo do Pedido</h2>
         <hr />
         <p>Subtotal</p>
-        <p>Entrega</p>
+        <p>Entrega   $60</p>
         <hr />
         <p>Total (VALOR)</p>
         <Link to="/checkout">
