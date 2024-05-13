@@ -171,7 +171,7 @@ label {
   color: white;
   font-family: 'Inter';
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
   @media (max-width: 768px) {
@@ -188,10 +188,11 @@ label {
 export const StyledInput = styled.input`
   width: calc(100% - 2 * 0.5rem); 
   border: 1px solid #cbd5e0;
-  border-radius: 1rem;
-  padding: 0.5rem;
+  border-radius: 2rem;
+  padding: 0.8rem;
   outline: none;
   font-size: 14px;
+  margin-bottom: 0.5rem;
 `;
 
 
@@ -199,7 +200,9 @@ export const StyledInput = styled.input`
 export const SubmitButton = styled.button`
   background-color: #265094;
   color: white;
-  padding: 0.75rem 3rem;
+  width: 100%;
+  height: 45px;
+  /* padding: 0.75rem 13rem; */
   border-radius: 9999px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -255,7 +258,8 @@ export const StyledRadio = styled.input`
 export const FieldsContainer = styled.div`
  display: grid;
   grid-template-columns: 1fr 1fr; 
-  gap: 1rem; 
+  gap: 0.1rem; 
+  margin-bottom: 1rem;
 `;
 
 
