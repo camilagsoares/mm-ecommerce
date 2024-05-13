@@ -8,8 +8,8 @@ export function Form() {
                 <BlueBackground>
                     <ResponsiveGreenFormContainer>
                         <form>
-                            <div>
-                                <div>
+                            <div >
+                                <div className="distanceLabel">
                                     <span className="title-Radio">Tipo de imóvel:</span>
                                     <StyledInputRadio>
                                         <StyledRadio type="radio" id="residencial" name="tipoImovel" value="residencial" />

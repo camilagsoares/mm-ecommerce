@@ -157,6 +157,10 @@ export const GreenFormContainer = styled.div`
   right: 4rem;
   margin-bottom: -2rem;
   height: 600px;
+
+  .distanceLabel{
+    margin-bottom: 20px;
+  }
 `;
 
 export const ResponsiveGreenFormContainer = styled(GreenFormContainer)`
@@ -241,6 +245,7 @@ export const StyledRadio = styled.input`
     outline: none;
     margin-right: 5px;
     position: relative;
+    margin-top: 1px;
 
     &:checked::before {
         content: '';
@@ -296,4 +301,5 @@ export const StyledInputRadio = styled.div`
 label {
   color: #265094;
 }
+
 `
