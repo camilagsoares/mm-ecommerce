@@ -22,26 +22,30 @@ export const CartInfo = styled.div`
   img {
     width: 100px;
     height: 100px;
-    margin-right: 10px; /* Add margin to separate the image from the text */
+    margin-right: 10px;
   }
 
   .item-info {
-    display: flex; /* Display title, price, and image in a row */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    align-items: center; 
   }
 
   .item-info-details {
     display: flex;
-    flex-direction: column; /* Stack title, price, and quantity vertically */
+    flex-direction: column;
   }
 
   .item-info-details span {
-    margin-bottom: 5px; /* Add margin between the title, price, and quantity */
+    margin-bottom: 5px; 
   }
 
   .actions {
-    margin-top: 20px; /* Add some space between the items and the buttons */
-    align-self: flex-end; /* Move the actions to the bottom of the container */
+    margin-top: 20px; 
+    align-self: flex-end; 
+  }
+
+  .btnAction:hover{
+    color: #adaaaa;
   }
 `;
 
@@ -50,6 +54,11 @@ export const CartInfo = styled.div`
 export const OrderSummary = styled.div`
   flex: 0 0 300px;
   margin-left: 20px;
+
+  .textCheckout{
+    text-align: center;
+    padding: 20px;
+  }
 `;
 
 export const ButtonAdd = styled.button`
@@ -64,4 +73,47 @@ export const ButtonAdd = styled.button`
   &:hover {
     background-color: #a5a9a6;
   }
+`;
+
+export const InputContainer = styled.div`
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+
+input[type="text"],
+textarea {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+`;
+
+export const ActionContainer = styled.div`
+display: flex;
+flex-direction: column;
+`;
+
+export  const ButtonWithIcon = styled.button`
+display: flex;
+align-items: center;
+text-align: center;
+width: 320px;
+height: 44px;
+color: black;
+transition: background-color 0.3s;
+margin-top: 10px; 
+border: none;
+cursor: pointer;
+
+&:hover {
+  color: #a5a9a6;
+}
+
+svg {
+  margin-right: 5px;
+}
 `;
