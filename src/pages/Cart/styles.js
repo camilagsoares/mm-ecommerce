@@ -55,9 +55,15 @@ export const OrderSummary = styled.div`
   flex: 0 0 300px;
   margin-left: 20px;
 
-  .textCheckout{
-    text-align: center;
-    padding: 20px;
+  .textCheckout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .textCheckout span {
+    margin-left: 5px;
   }
 `;
 
@@ -87,6 +93,7 @@ textarea {
   border: 1px solid #ccc;
   resize: none;
   border-radius: 4px;
+  width: 400px;
   font-size: 14px;
   outline: none;
 }
@@ -97,7 +104,7 @@ display: flex;
 flex-direction: column;
 `;
 
-export  const ButtonWithIcon = styled.button`
+export const ButtonWithIcon = styled.button`
 display: flex;
 align-items: center;
 text-align: center;
@@ -116,4 +123,28 @@ cursor: pointer;
 svg {
   margin-right: 5px;
 }
+`;
+
+
+export const QuantityContainer = styled.div`
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  height: 30px; 
+  margin-top: 5px;
+  width: 100px;
+  margin-bottom: 5px;
+`;
+
+export const QuantityButton = styled.button`
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 5px; 
+  cursor: pointer;
+`;
+
+export const QuantitySpan = styled.span`
+  margin: 0 5px; 
 `;

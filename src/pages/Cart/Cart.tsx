@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from "react";
 import { useCart } from "./CartItems";
-import { ButtonAdd, CartContainer, CartInfo, OrderSummary, InputContainer, ActionContainer, ButtonWithIcon } from './styles'
+import { ButtonAdd, CartContainer, CartInfo, OrderSummary, InputContainer, ActionContainer, ButtonWithIcon, QuantityContainer, QuantityButton, QuantitySpan } from './styles'
 import { Link } from "react-router-dom";
 import { HiMiniLockClosed } from "react-icons/hi2";
 import { IoPricetagOutline } from "react-icons/io5";
@@ -43,7 +43,12 @@ export const Cart = () => {
                 <div className="item-info-details">
                   <span>{item.product.name}</span>
                   <span>Preço: {item.price}</span>
-                  <span>Quantidade: {item.quantity}</span>
+                  <QuantityContainer>
+                    <QuantityButton>-</QuantityButton>
+                    <QuantitySpan>{item.quantity}</QuantitySpan>
+                    <QuantityButton>+</QuantityButton>
+                  </QuantityContainer>
+                  {/* <span>Quantidade: {item.quantity}</span> */}
                 </div>
               </div>
             </li>
@@ -82,8 +87,10 @@ export const Cart = () => {
         <p>Total (VALOR)</p>
         <Link to="/checkout">
           <ButtonAdd>Checkout</ButtonAdd>
-          <p className="textCheckout"> <HiMiniLockClosed />
-            Checkout seguro</p>
+          <div className="textCheckout">
+            <HiMiniLockClosed />
+            <span>Checkout seguro</span>
+          </div>
         </Link>
       </OrderSummary>
     </CartContainer>
