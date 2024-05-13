@@ -168,10 +168,12 @@ export const ResponsiveGreenFormContainer = styled(GreenFormContainer)`
 }
 
 label {
-  color : white;
+  color: white;
   font-family: 'Inter';
-  font-style: bold;
+  font-size: 15px;
+  font-weight: 500;
 }
+
   @media (max-width: 768px) {
     width: 90%;
     max-width: none;
@@ -184,13 +186,13 @@ label {
 `;
 
 export const StyledInput = styled.input`
-  border: 1px solid #cbd5e0;
+ border: 1px solid #cbd5e0;
   border-radius: 1rem;
   padding: 0.5rem;
-  width: 100%; 
+  width: calc(100% - 2 * 0.5rem); 
   margin-bottom: 1rem;
   outline: none;
-  font-size: 14px; 
+  font-size: 14px;
 `;
 
 
@@ -198,7 +200,7 @@ export const StyledInput = styled.input`
 export const SubmitButton = styled.button`
   background-color: #265094;
   color: white;
-  padding: 0.75rem 3rem; /* Ajuste o padding conforme necessário */
+  padding: 0.75rem 3rem;
   border-radius: 9999px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -228,14 +230,6 @@ export const BlueText = styled.label`
     color: #265094;
 `;
 
-export const RoundInput = styled.input`
-    border-radius: 50px;
-    border: 2px solid white;
-    background-color: transparent;
-    padding: 10px;
-    margin-right: 5px;
-`;
-
 export const StyledRadio = styled.input`
     appearance: none;
     width: 18px;
@@ -248,8 +242,8 @@ export const StyledRadio = styled.input`
 
     &:checked::before {
         content: '';
-        width: 8px; /* Tamanho menor da bolinha */
-        height: 8px; /* Tamanho menor da bolinha */
+        width: 8px;
+        height: 8px; 
         border-radius: 50%;
         background-color: #265094;
         position: absolute;
@@ -268,10 +262,9 @@ export const FieldsContainer = styled.div`
 
 
 export const StyledSelectWithMargin = styled(StyledSelect)`
-  flex: 1; /* Ocupa o espaço disponível */
+  flex: 1; 
 `;
 
-// Estilizando os campos "Sobre o imóvel" e "Título do imóvel"
 export const StyledRadioWithMargin = styled(StyledRadio)`
   margin-right: 0.5rem;
 `;
@@ -296,3 +289,9 @@ export const GreenLine = styled.div`
   margin-left: 20px;
   /* margin-top: -0.94rem; */
 `;
+
+export const StyledInputRadio = styled.div`
+label {
+  color: #265094;
+}
+`
