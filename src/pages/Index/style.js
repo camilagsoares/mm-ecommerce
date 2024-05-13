@@ -186,11 +186,10 @@ label {
 `;
 
 export const StyledInput = styled.input`
- border: 1px solid #cbd5e0;
+  width: calc(100% - 2 * 0.5rem); 
+  border: 1px solid #cbd5e0;
   border-radius: 1rem;
   padding: 0.5rem;
-  width: calc(100% - 2 * 0.5rem); 
-  margin-bottom: 1rem;
   outline: none;
   font-size: 14px;
 `;
@@ -254,10 +253,9 @@ export const StyledRadio = styled.input`
 `;
 
 export const FieldsContainer = styled.div`
-  display: flex;
-  align-items: center; 
+ display: grid;
+  grid-template-columns: 1fr 1fr; 
   gap: 1rem; 
-  width: 100%;
 `;
 
 
